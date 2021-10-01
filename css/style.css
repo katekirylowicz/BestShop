@@ -23,7 +23,8 @@ body {
 }
 
 .container {
-  width: 84.5rem;
+  max-width: 84.5rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -39,9 +40,25 @@ a.logo {
   text-decoration: none;
 }
 
-.btn {}
+.btn {
+  text-decoration: none;
+  font-family: var(--font-open-sans);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  border-radius: var(--button-radius);
+  -webkit-border-radius: var(--button-radius);
+  -moz-border-radius: var(--button-radius);
+  -ms-border-radius: var(--button-radius);
+  -o-border-radius: var(--button-radius);
+  padding: 19px 97px;
+}
 
-.btn__large {}
+.btn__large {
+  font-size: 1rem;
+  padding: 22px 157px;
+  box-shadow: 3px 10px 14px var(--color-primary-shadow);
+}
 
 .btn__small {}
 
@@ -54,7 +71,7 @@ a.logo {
 /* Components__end*/
 
 /*common classes*/
-
+/*header style start*/
 .header {
   height: 4.375rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
@@ -107,4 +124,34 @@ a.logo {
   color: var(--color-black);
   font-weight: 700;
   cursor: pointer;
+}
+
+/*header end*/
+
+/*hero section start*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero--copy {
+  text-align: center;
+}
+
+.hero--copy__head {
+  margin: 8.125rem auto 1.25rem auto;
+  font-family: var(--font-raleway);
+  font-size: 3.06rem;
+}
+
+p.hero--copy__text {
+  font-size: 1rem;
+  line-height: 3;
+  margin: 1.25rem auto 2.375rem auto;
+}
+
+.hero__image {
+  height: auto;
+  width: 100%;
 }
