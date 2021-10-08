@@ -1,0 +1,113 @@
+.contact {
+  display: flex;
+  font-family: $font-open-sans;
+  justify-content: center;
+  padding: 80px 100px 100px 80px;
+}
+
+.contact__data {
+  align-items: center;
+  color: $color-grey;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+
+.contact__leave_message {
+  width: 50%;
+}
+
+.contact__header h3 {
+  font-size: 3.06rem;
+  margin-bottom: 22px;
+}
+
+.contact__header p {
+  font-size: 1 rem;
+  margin-bottom: 42px;
+
+}
+
+.contact__data a {
+  color: $color-grey;
+  font-size: 1rem;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.form__label {
+  color: $color-primary;
+  font-family: $font-raleway;
+  font-weight: 800;
+  font-size: 0.687rem;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 42px;
+
+}
+
+
+.accept__text {
+  color: #707070;
+  font-size: 0.75rem;
+  margin-top: 30px;
+}
+
+.checkbox input {
+
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  display: flex;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 1px solid $color-grey;
+  background-color: transparent;
+  line-height: 2.625rem;
+  width: 80%;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+}
+
+.checkbox span {
+  height: 24px;
+  flex-shrink: 0;
+  flex-basis: 24px;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.checkbox input:checked+span::after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: tomato;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.form .btn {
+  font-size: 0.8125rem;
+  padding: 20px 97px;
+  align-self: flex-end;
+  margin-top: 20px;
+}
