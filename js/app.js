@@ -1,19 +1,17 @@
 /* menu nav hamburger event*/
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav__menu");
+const nav = document.querySelector(".nav");
 
-hamburger.addEventListener('click', phoneMenu);
-
-function phoneMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+function toggleMenu() {
+  nav.classList.toggle("active");
 }
-/* to close droped menu*/
-const navA = document.querySelectorAll(".nav__menu__item__a");
-
-navA.forEach(n => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
+  nav.classList.remove("active");
 }
+
+hamburger.addEventListener('click', toggleMenu);
+
+/* to close droped menu*/
+const navA = document.querySelectorAll(".nav__menu__item__a");
+navA.forEach(n => n.addEventListener("click", closeMenu));
