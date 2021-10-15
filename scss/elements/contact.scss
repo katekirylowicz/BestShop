@@ -3,6 +3,21 @@
   font-family: $font-open-sans;
   justify-content: center;
   padding: 80px 100px 100px 80px;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px;
+
+    &__column {
+      width: 50%;
+    }
+
+
+    @include phone {
+      width: 100%;
+    }
+  }
 }
 
 .contact__data {
