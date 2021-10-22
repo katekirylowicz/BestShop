@@ -9,7 +9,6 @@
   justify-content: center;
   margin: 0 auto;
   max-width: 1184px;
-  width: 100%;
 }
 
 .benefits__item {
@@ -22,11 +21,25 @@
   height: 370px;
   margin: 18px 30px 18px;
   overflow: hidden;
+
+  @include tablet {
+    height: auto;
+  }
 }
 
 .benefits__item--wide {
   display: flex;
   width: 1124px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.benefits__item--reversed {
+  @include tablet {
+    flex-direction: column-reverse;
+  }
 }
 
 .benefits__item--copy {
@@ -37,6 +50,10 @@
   height: auto;
   position: relative;
   width: 440px;
+
+  @include tablet {
+    width: 429vw;
+  }
 }
 
 .benefits__item--media::before {
@@ -50,10 +67,18 @@
   height: 56%;
   margin-bottom: 62px;
   margin-left: 62px;
-  max-width: 100%;
+  max-width: 67%;
   object-fit: contain;
   vertical-align: bottom;
   width: 67%;
+
+  @include tablet {
+    margin-bottom: 0;
+    margin-top: 35px;
+    width: 67%;
+  }
+
+
 }
 
 .benefits__item__text {
@@ -64,6 +89,12 @@
   justify-content: center;
   max-width: 50%;
   padding: 0 36px;
+
+  @include tablet {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    max-width: unset;
+  }
 }
 
 .benefits__item--copy .benefits__item__text {
@@ -93,11 +124,32 @@
   max-width: 327px;
   position: absolute;
   width: 80%;
+
+  @include tablet {
+    max-width: 31vw;
+
+  }
+}
+
+.benefits__item:nth-child(3) {
+  max-width: 100%;
+  padding-top: 18px;
+
+  @include phone {
+
+    margin-bottom: 0;
+
+
+  }
 }
 
 .benefits__item__image {
   flex: 1 1 auto;
   position: relative;
+
+  @include tablet {
+    padding-top: 50%;
+  }
 }
 
 .benefits__item__image img {
@@ -113,6 +165,11 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   width: auto;
+}
+
+.benefits__item__image--square {
+  height: 100%;
+  width: 100%;
 }
 
 .benefits__item__image--square::before {
@@ -134,6 +191,16 @@
   -o-transform: translate(0%, -60%) rotate(45deg);
   transform-origin: 50% 50%;
   width: 200px;
+
+  @include tablet {
+    border-radius: 4vw;
+    -webkit-border-radius: 4vw;
+    -moz-border-radius: 4vw;
+    -ms-border-radius: 4vw;
+    -o-border-radius: 4vw;
+    height: 19.5vw;
+    width: 19.5vw;
+  }
 }
 
 .benefits__item__image--square img {
@@ -143,6 +210,10 @@
   -moz-transform: translate(-50%, -30%);
   -ms-transform: translate(-50%, -30%);
   -o-transform: translate(-50%, -30%);
+
+  @include tablet {
+    height: 21.38vw;
+  }
 }
 
 .benefits__item__image--circle::before {
@@ -164,10 +235,20 @@
   -o-transform: translate(-75%, -55%);
   transform-origin: 50% 50%;
   width: 320px;
+
+  @include tablet {
+    height: 31vw;
+    width: 31vw;
+  }
 }
 
 .benefits__item__image--circle img {
   height: 328px;
+
+  @include tablet {
+    height: 32.03vw;
+    width: 32.03vw;
+  }
 }
 
 .btn--redish,

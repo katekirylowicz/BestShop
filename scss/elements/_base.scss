@@ -2,10 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*body__typography start*/
 body {
   color: $color-black;
   font-family: $font-open-sans;
+
 }
 
 .container {
